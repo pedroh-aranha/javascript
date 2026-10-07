@@ -3,10 +3,14 @@ const saida = document.querySelector("#resultado");
 
 botao.onclick = () => {
 
-    const n1 = (document.querySelector("#nota1").value);
-    const n2 = (document.querySelector("#nota2").value);
-    const n3 = (document.querySelector("#nota3").value);
+    const n1 = Number(document.querySelector("#nota1").value);
+    const n2 = Number(document.querySelector("#nota2").value);
+    const n3 = Number(document.querySelector("#nota3").value);
+
     const media = (n1 + n2 + n3) / 3;
 
-    saida.textContent = "Média: " + media
+    saida.textContent = "Média: " + media.toFixed(2)
+    
+    /*sem o Number ele nao entende que sao numeros */
+    /*.toFixed(2) formata o número para 2 casas decimais */
 }
