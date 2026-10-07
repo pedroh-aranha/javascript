@@ -11,6 +11,8 @@ botao.onclick = () => {
 
     saida.textContent = "Média: " + media.toFixed(2)
     
+    /*o const botao estava calcula*/ 
     /*sem o Number ele nao entende que sao numeros */
     /*.toFixed(2) formata o número para 2 casas decimais */
+    /*a priorizaçao da soma*/
 }

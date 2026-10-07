@@ -6,7 +6,7 @@ botao.onclick = () => {
     const minutos = Number(document.querySelector("#minutos").value);
 
     const horas = Math.floor(minutos / 60);
-    const segundos = minutos % 60;
+    const minu = minutos % 60;
 
-    saida.textContent = "Horas: " + horas + " | Segundos: " + segundos;
+    saida.textContent = "Horas: " + horas + " | Minutos: " + minu;
 }
