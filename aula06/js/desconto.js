@@ -1,14 +1,14 @@
-const botao = document.querySelector("#calcular");
-const saida = document.querySelector("#resultado");
+// Exercício 3.3 (Desconto)
+const botao = document.querySelector("#calcular")
+const saida = document.querySelector("#resultado")
 
 botao.onclick = () => {
+  const preco = Number(document.querySelector("#preco").value)
+  const percentual = Number(document.querySelector("#percentual").value)
 
-    const preço = Number(document.querySelector("#preço").value);
-    const desconto = Number(document.querySelector("#desconto").value);
+  const desconto = preco * percentual / 100
+  const precoFinal = preco - desconto
 
-    const valorDesconto = preço * (desconto / 100);
-    const preçoFinal = preço - valorDesconto;
-
-    saida.textContent = "Preço final: R$ " + preçoFinal.toFixed(2);
-    saida.textContent += " (Desconto: R$ " + valorDesconto.toFixed(2) + ")";
+  saida.textContent = "Desconto: R$ " + desconto.toFixed(2) + "\n" +
+                      "Preço final: R$ " + precoFinal.toFixed(2)
 }
